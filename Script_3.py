@@ -1,7 +1,7 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.bash import BashOperator
-from airflow.utils_rule import triggerRule
+from airflow.utils_rule import TriggerRule
 
 
 with DAG(
@@ -27,13 +27,13 @@ with DAG(
     )
     Pipo = BashOperator(
             task_id="pipo",
-            bash_command="echo 'Tache 3 : OK'"
-            trigger_rule=triggerRule.ONE_FAILED
+            bash_command="echo 'Tache 3 : OK'",
+            trigger_rule=TriggerRule.ONE_FAILED
     )
     toto = BashOperator(
             task_id="toto",
-            bash_command="echo 'Tache 4 : OK'"
-            trigger_rule=triggerRule.ONE_SUCCESS
+            bash_command="echo 'Tache 4 : OK'",
+            trigger_rule=TriggerRule.ONE_SUCCESS
     )
 
     hello >> babou >> Pipo
