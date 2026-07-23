@@ -1,7 +1,7 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.bash import BashOperator
-from airflow.utils_rule import triggerRule
+#from airflow.utils_rule import triggerRule
 
 
 with DAG(
