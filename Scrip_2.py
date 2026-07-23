@@ -15,11 +15,11 @@ with DAG(
     )
     babou = BashOperator(
         task_id="babou",
-        bash_command="echo 'Tache 1 : OK"
+        bash_command="echo 'Tache 1 : OK'"
     )
     dodo = BashOperator(
         task_id="dodo",
-        bash_command="echo 'Tache 2 : OK"
+        bash_command="echo 'Tache 2 : OK'"
     )
 
     hello >> babou >> dodo
