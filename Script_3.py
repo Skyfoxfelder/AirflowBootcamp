@@ -5,7 +5,7 @@ from airflow.utils_rule import triggerRule
 
 
 with DAG(
-    dag_id="dag_exercice_2",
+    dag_id="dag_exercice2",
     start_date=datetime(2026, 23, 7),
     schedule=None,
     catchup=False,
