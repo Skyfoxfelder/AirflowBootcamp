@@ -6,7 +6,7 @@ from airflow.operators.bash import BashOperator
 
 with DAG(
     dag_id="dag_exercice2",
-    start_date=datetime(2026, 23, 7),
+    start_date=datetime(2026, 7, 23),
     schedule=None,
     catchup=False,
     tags=["guide"],
