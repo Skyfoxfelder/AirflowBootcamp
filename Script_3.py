@@ -27,11 +27,11 @@ with DAG(
     )
     Pipo = BashOperator(
             task_id="pipo",
-            bash_command="echo 'Tache 2 : OK'"
+            bash_command="echo 'Tache 3 : OK'"
     )
     toto = BashOperator(
             task_id="toto",
-            bash_command="echo 'Tache 2 : OK'"
+            bash_command="echo 'Tache 4 : OK'"
     )
 
     hello >> [babou, Pipo] >> [dodo, toto]
